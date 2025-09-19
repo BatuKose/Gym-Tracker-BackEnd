@@ -1,0 +1,66 @@
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\bin\Debug\net6.0\Entites.deps.json
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\bin\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\bin\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\Entites.AssemblyInfoInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\Entites.AssemblyInfo.cs
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\Entites.csproj.CoreCompileInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\refint\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\ref\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\bin\Debug\net6.0\Entites.deps.json
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\bin\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\bin\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.AssemblyInfoInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.AssemblyInfo.cs
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.csproj.CoreCompileInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\refint\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Yeni\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\ref\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\bin\Debug\net6.0\Entites.deps.json
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\bin\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\bin\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.AssemblyInfoInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.AssemblyInfo.cs
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.csproj.CoreCompileInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\refint\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.1\Entites\obj\Debug\net6.0\ref\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\bin\Debug\net6.0\Entites.deps.json
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\bin\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\bin\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\obj\Debug\net6.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\obj\Debug\net6.0\Entites.AssemblyInfoInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\obj\Debug\net6.0\Entites.AssemblyInfo.cs
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\obj\Debug\net6.0\Entites.csproj.CoreCompileInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\obj\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\obj\Debug\net6.0\refint\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\obj\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.2\Entites\obj\Debug\net6.0\ref\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\bin\Debug\net6.0\Entites.deps.json
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\bin\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\bin\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\obj\Debug\net6.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\obj\Debug\net6.0\Entites.AssemblyInfoInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\obj\Debug\net6.0\Entites.AssemblyInfo.cs
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\obj\Debug\net6.0\Entites.csproj.CoreCompileInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\obj\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\obj\Debug\net6.0\refint\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\obj\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.3\Entites\obj\Debug\net6.0\ref\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\bin\Debug\net6.0\Entites.deps.json
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\bin\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\bin\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\obj\Debug\net6.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\obj\Debug\net6.0\Entites.AssemblyInfoInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\obj\Debug\net6.0\Entites.AssemblyInfo.cs
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\obj\Debug\net6.0\Entites.csproj.CoreCompileInputs.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\obj\Debug\net6.0\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\obj\Debug\net6.0\refint\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\obj\Debug\net6.0\Entites.pdb
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\Entites\obj\Debug\net6.0\ref\Entites.dll
