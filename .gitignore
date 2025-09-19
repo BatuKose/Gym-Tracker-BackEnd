@@ -1,0 +1,18 @@
+# Build artifacts
+bin/
+obj/
+[Bb]uild/
+[Ll]ogs/
+internal_logs/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE specific
+.vs/
+.idea/
+*.swp
+*.DS_Store
