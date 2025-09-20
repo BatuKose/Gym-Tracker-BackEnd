@@ -18,5 +18,8 @@ namespace Entites.RequestFeatures
         }
 
         public string? SearchTerm { get; set; }
+        
+        public string? orderBy { get; set; }
+       
     }
 }

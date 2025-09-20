@@ -16,6 +16,7 @@ namespace Presentation.Controllers
 {
     [ApiController]
     [Route("api/users")]
+    [Produces("application/json")] // ilerde kaldırılcak
     public class UserController :ControllerBase
     {
         private readonly IServiceManager _serviceManager;

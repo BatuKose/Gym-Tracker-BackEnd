@@ -9,5 +9,10 @@ namespace Entites.RequestFeatures
     public class UserParameters:RequestParameters
     {
         public bool? Erkekmi { get; set; }
+
+        public UserParameters()
+        {
+            orderBy="id";
+        }
     }
 }

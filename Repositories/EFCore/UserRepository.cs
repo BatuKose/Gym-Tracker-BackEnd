@@ -28,7 +28,8 @@ namespace Repositories.EFCore
         {
             
             return !trackChanges
-               ? await _context.Users.AsNoTracking().Search(userParameters.SearchTerm).OrderBy(u=>u.Id).Skip((userParameters.PageNumber-1)*userParameters.PageSize).Take(userParameters.PageSize).ToListAsync()  
+               ? await _context.Users.AsNoTracking().Search(userParameters.SearchTerm)
+               .Sort(userParameters.orderBy).Skip((userParameters.PageNumber-1)*userParameters.PageSize).Take(userParameters.PageSize).ToListAsync()  
                 :  await _context.Users.ToListAsync();                 
         }
       

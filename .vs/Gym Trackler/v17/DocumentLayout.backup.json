@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{76E53799-795B-4A27-82FC-7E44A4195D13}|Repositories\\Repositories.csproj|c:\\users\\batuhan\\desktop\\desktop\\itsoftware\\asp.net web api\\projeler\\gym trackler v 1.4\\repositories\\efcore\\extensions\\userrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76E53799-795B-4A27-82FC-7E44A4195D13}|Repositories\\Repositories.csproj|solutionrelative:repositories\\efcore\\extensions\\userrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76E53799-795B-4A27-82FC-7E44A4195D13}|Repositories\\Repositories.csproj|c:\\users\\batuhan\\desktop\\desktop\\itsoftware\\asp.net web api\\projeler\\gym trackler v 1.4\\repositories\\efcore\\extensions\\orderquerybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76E53799-795B-4A27-82FC-7E44A4195D13}|Repositories\\Repositories.csproj|solutionrelative:repositories\\efcore\\extensions\\orderquerybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderQueryBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Repositories\\EFCore\\Extensions\\OrderQueryBuilder.cs",
+              "RelativeDocumentMoniker": "Repositories\\EFCore\\Extensions\\OrderQueryBuilder.cs",
+              "ToolTip": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Repositories\\EFCore\\Extensions\\OrderQueryBuilder.cs",
+              "RelativeToolTip": "Repositories\\EFCore\\Extensions\\OrderQueryBuilder.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T17:10:51.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRepositoryExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Repositories\\EFCore\\Extensions\\UserRepositoryExtensions.cs",
+              "RelativeDocumentMoniker": "Repositories\\EFCore\\Extensions\\UserRepositoryExtensions.cs",
+              "ToolTip": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Repositories\\EFCore\\Extensions\\UserRepositoryExtensions.cs",
+              "RelativeToolTip": "Repositories\\EFCore\\Extensions\\UserRepositoryExtensions.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAADEAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T16:21:37.864Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

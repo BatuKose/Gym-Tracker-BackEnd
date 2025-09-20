@@ -515,8 +515,8 @@ C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackle
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfoInputs.cache
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfo.cs
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.csproj.CoreCompileInputs.cache
-C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.sourcelink.json
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\rjimswa.dswa.cache.json
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json
@@ -532,3 +532,5 @@ C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackle
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.pdb
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler v 1.4\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs

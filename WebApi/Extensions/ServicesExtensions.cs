@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
+using Microsoft.OpenApi.Models;
 using Presentation.ActionFilters;
 using Repositories.Contracts;
 using Repositories.EFCore;
@@ -32,5 +33,6 @@ namespace WebApi.Extensions
         {
             services.AddScoped<ValidationFilterAttribute>();
         }
+        
     }
 }

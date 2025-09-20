@@ -1,11 +1,16 @@
 ﻿using Entites.DataTransferObject.ExerciseWithUser;
 using Entites.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq.Dynamic.Core;
 
 namespace Repositories.EFCore.Extensions
 {
@@ -37,6 +42,15 @@ namespace Repositories.EFCore.Extensions
 
             }
             return users;
+        }
+        public static IQueryable<User> Sort(this IQueryable<User> users, string orderByQueryString)
+        {
+            if (string.IsNullOrWhiteSpace(orderByQueryString))
+                return users.OrderBy(u => u.Id);
+            var orderQuery = OrderQueryBuilder.CreateOrderQuery<User>(orderByQueryString);
+            if (string.IsNullOrWhiteSpace(orderQuery))
+                return users.OrderBy(u => u.Id);
+            return users.OrderBy(orderQuery); 
         }
     }
 }

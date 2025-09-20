@@ -23,6 +23,8 @@ namespace Services
         }
         public IUserService UserService => _userService.Value;
         public IExerciseService ExerciseService => _exerciseService.Value;
-        public  IUserProfileService ProfileService => _profileService.Value;
+        public  IUserProfileService UserProfileService => _profileService.Value;
+
+        
     }
 }

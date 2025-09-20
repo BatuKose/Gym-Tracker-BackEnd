@@ -13,6 +13,7 @@ namespace Presentation.Controllers
 {
     [ApiController]
     [Route("api/exercise")]
+    [Produces("application/json")] // ilerde kaldırılcak
     public class ExerciseController : ControllerBase
     {
         private readonly IServiceManager _serviceManager;

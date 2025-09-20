@@ -22,22 +22,29 @@ namespace Services
             _logger=logger;
             _mapper=mapper;
         }
-        
+
         // HATALI DTO USER BİLGİSİNDE SIKINTI VAR YARIM KOD
-        public async Task<UserProfile> GetUserProfileAsync(int id, bool trackChanges)
+        public async Task<UserProfileDto> GetUserProfileAsync(int id, bool trackChanges)
         {
-            var Profile= await _manager.userProfileRepository.GetUserProgileAsync(id, trackChanges);
-            if (Profile is null) throw new Exception("Profil bilgileri bulunamamıştır.");
+            var profile = await _manager.userProfileRepository.GetUserProgileAsync(id, trackChanges);
+
+            if (profile is null)
+                throw new Exception("Profil bilgileri bulunamamıştır.");
+
             var dto = new UserProfileDto()
             {
-                
-                Weight= Profile.Weight,
-                Height= Profile.Height,
-                Age= Profile.Age,
-                ActivityLevel=Profile.ActivityLevel.ToString(),
-                FitnessGoal=Profile.fitnessGoal.ToString()
+                UserName = profile.User.Username,
+                Erkekmi = profile.User.erkekMi,
+                Weight = profile.Weight,
+                Height = profile.Height,
+                Age = profile.Age,
+                ActivityLevel = profile.ActivityLevel.ToString(),
+                FitnessGoal = profile.fitnessGoal.ToString()
             };
-            return Profile;
+
+            return dto;
         }
+
+        
     }
 }
