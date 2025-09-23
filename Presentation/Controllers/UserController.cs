@@ -17,6 +17,7 @@ namespace Presentation.Controllers
     [ApiController]
     [Route("api/users")]
     [Produces("application/json")] // ilerde kaldırılcak
+    
     public class UserController :ControllerBase
     {
         private readonly IServiceManager _serviceManager;
@@ -25,6 +26,7 @@ namespace Presentation.Controllers
         {
             _serviceManager = serviceManager;
         }
+       
         [HttpPost]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task< IActionResult> CreateUser([FromBody] MyUser user)
@@ -76,6 +78,13 @@ namespace Presentation.Controllers
           await  _serviceManager.UserService.UpdateUser(id, entiy, true);
             return NoContent();
         }
-
+        [HttpOptions]
+        public IActionResult GetUserOptions()
+        {
+            
+            Response.Headers.Add("Allow", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
+            Response.Headers.Add("Accept","application/json, application/xml");
+            return Ok();
+        }
     }
 }

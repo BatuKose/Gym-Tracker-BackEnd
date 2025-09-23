@@ -26,5 +26,12 @@ namespace Presentation.Controllers
             var profile= await _manager.UserProfileService.GetUserProfileAsync(id, false);
             return Ok(profile);
         }
+        [HttpOptions]
+        public IActionResult Options()
+        {
+            Response.Headers.Add("Allow", "GET, OPTIONS");
+            Response.Headers.Add("Accept", "application/json, application/xml");
+            return Ok();
+        }
     }
 }

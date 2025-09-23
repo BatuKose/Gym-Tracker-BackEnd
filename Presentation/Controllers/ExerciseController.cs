@@ -30,7 +30,7 @@ namespace Presentation.Controllers
             return StatusCode(201);
         }
 
-
+        [HttpHead] // kontrol
         [HttpGet("exercise/users/{id:int}")]
         [Produces("application/json")]
         public IActionResult GetUserWithExercises([FromRoute(Name = "id")] int id, [FromQuery] UserWithExerciseParameters userWithExerciseParameters)
@@ -61,6 +61,13 @@ namespace Presentation.Controllers
         {
             _serviceManager.ExerciseService.DeleteExerciseById(id);
             return NoContent();
+        }
+        [HttpOptions]
+        public IActionResult Options()
+        {
+            Response.Headers.Add("Allow", "GET, POST, PUT, DELETE, OPTIONS");
+            Response.Headers.Add("Accept","application/json, application/xml");
+            return Ok();
         }
     }
 }

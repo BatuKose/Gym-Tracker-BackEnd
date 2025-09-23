@@ -29,6 +29,7 @@ namespace Repositories.EFCore.Extensions
             var lowerCase=searchTerm.Trim().ToLower();
             return dto.Where(e => e.Exercise.Any(ex => ex.Name.ToLower().Contains(searchTerm)));
         }
+        
         public static IQueryable<UserWithExercisesDto>Filter(this IQueryable<UserWithExercisesDto> dto, uint minSet,uint maxSet)
         {
             if (minSet==0 || maxSet==0) return dto;

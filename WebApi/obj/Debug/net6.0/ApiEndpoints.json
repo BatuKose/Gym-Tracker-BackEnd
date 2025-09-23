@@ -1,6 +1,72 @@
 [
   {
     "ContainingType": "Presentation.Controllers.ExerciseController",
+    "Method": "GetUserWithExercises",
+    "RelativePath": "api/exercise",
+    "HttpMethod": "HEAD",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchExercise",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinSet",
+        "Type": "System.Nullable\u00601[[System.UInt32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxSet",
+        "Type": "System.Nullable\u00601[[System.UInt32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ValidSetRange",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchTerm",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "orderBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.ExerciseController",
+    "Method": "Options",
+    "RelativePath": "api/exercise",
+    "HttpMethod": "OPTIONS",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.ExerciseController",
     "Method": "CreateOneExercise",
     "RelativePath": "api/exercise/{id}",
     "HttpMethod": "POST",
@@ -131,6 +197,16 @@
   },
   {
     "ContainingType": "Presentation.Controllers.UserProfileController",
+    "Method": "Options",
+    "RelativePath": "api/profile",
+    "HttpMethod": "OPTIONS",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.UserProfileController",
     "Method": "GetUserProfileAsync",
     "RelativePath": "api/profile/{id}",
     "HttpMethod": "GET",
@@ -200,6 +276,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.UserController",
+    "Method": "GetUserOptions",
+    "RelativePath": "api/users",
+    "HttpMethod": "OPTIONS",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
