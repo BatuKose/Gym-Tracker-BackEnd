@@ -20,5 +20,7 @@ namespace Services.Contracts
         public Task DeleteUser(int id, bool trackChanges);
         public Task UpdateUser(int id, User user, bool trackChanges);
         UserWithExercisesDto GetUserWithExercises(UserWithExerciseParameters userWithExerciseParameters,int id);
+        Task<List<User>> GetAllUsersAsync(bool trackChanges);
+      
     }
 }

@@ -1,7 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AspNetCoreRateLimit;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.OpenApi.Models;
 using Presentation.ActionFilters;
+using Presentation.Controllers;
 using Repositories.Contracts;
 using Repositories.EFCore;
 using Services;
@@ -33,6 +37,45 @@ namespace WebApi.Extensions
         {
             services.AddScoped<ValidationFilterAttribute>();
         }
-        
+        public static void ConfigureVersioning(this IServiceCollection services)
+        {
+            services.AddApiVersioning(
+                opt=>
+                {
+                    opt.ReportApiVersions=true;
+                    opt.AssumeDefaultVersionWhenUnspecified=true;
+                    opt.DefaultApiVersion= new ApiVersion(1,2);
+                    opt.ApiVersionReader= new HeaderApiVersionReader("api-version");
+                    opt.Conventions.Controller<ExerciseController>().HasApiVersion(new ApiVersion(1,2));
+                    opt.Conventions.Controller<UserController>().HasApiVersion(new ApiVersion(1, 2));
+                    opt.Conventions.Controller<UserProfileController>().HasApiVersion(new ApiVersion(1, 2));
+                    opt.Conventions.Controller<UserController>().HasDeprecatedApiVersion(new ApiVersion(1, 1));
+                }
+                );
+        }
+        public static void ConfigureRateLimitingOptions(this IServiceCollection services)
+        {
+
+            var rateLimitRules = new List<RateLimitRule>()
+            { 
+                new RateLimitRule()
+                {
+                    Endpoint="*",
+                    Limit=100,
+                    Period="1m"
+                }
+            };
+
+            services.Configure<IpRateLimitOptions>(opt =>
+            {
+                opt.GeneralRules=rateLimitRules;
+            });
+
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IIpPolicyStore,MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitConfiguration,RateLimitConfiguration>();
+            services.AddSingleton<IProcessingStrategy,AsyncKeyLockProcessingStrategy>();
+
+        }
     }
 }

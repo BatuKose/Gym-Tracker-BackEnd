@@ -60,12 +60,21 @@ namespace Services
            _loggerService.LogWarning(getUser.Username+"adlı kullanıcı silindi.");
         }
 
+        public async Task<List<User>> GetAllUsersAsync(bool trackChanges)
+        {
+            return await _manager.UserRepository.GetAllUserAsync(trackChanges);
+        }
+
+
         public async Task< IEnumerable<GetUserDto>> GetAllUsersAsync(UserParameters userParameters,bool trackChanges)
         {
             var Users = await _manager.UserRepository.GetAllUserAsync(userParameters,trackChanges);
             return _mapper.Map<IEnumerable<GetUserDto>>(Users);
 
         }
+
+       
+
         public async Task< User> GetUserByIdAsync(int id, bool trackChanges)
         {
             

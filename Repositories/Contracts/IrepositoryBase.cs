@@ -12,6 +12,7 @@ namespace Repositories.Contracts
     {
         
         IQueryable<T> FinAllByCondition(Expression<Func<T,bool>>expression,bool tracChanges);
+     
         void Create(T entity);
         void Update(T entity);
         void Delete(T entity);

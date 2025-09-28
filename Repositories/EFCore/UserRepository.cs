@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Repositories.EFCore
 {
-    public  sealed class UserRepository : RepositoryBase<User>, IUserRepository
+    public sealed class UserRepository : RepositoryBase<User>, IUserRepository, IVersioninTest<User>
     {
         public UserRepository(RepositoryContext context) : base(context)
         {
@@ -23,6 +23,13 @@ namespace Repositories.EFCore
 
         public void DeleteUser(User user)=>Delete(user);
 
+        public async Task<List<User>> FindAllAsync(bool trackChanges)
+        {
+            return trackChanges
+                ? await _context.Users.OrderBy(u => u.Id).ToListAsync()
+                : await _context.Users.AsNoTracking().OrderBy(u => u.Id).ToListAsync();
+        }
+
 
         public async Task< IEnumerable<User>> GetAllUserAsync(UserParameters userParameters,bool trackChanges)
         {
@@ -32,9 +39,11 @@ namespace Repositories.EFCore
                .Sort(userParameters.orderBy).Skip((userParameters.PageNumber-1)*userParameters.PageSize).Take(userParameters.PageSize).ToListAsync()  
                 :  await _context.Users.ToListAsync();                 
         }
-      
 
-
+        public async Task<List<User>> GetAllUserAsync(bool trackChanges)
+        {
+            return await _context.Users.OrderBy(u=>u.Id).ToListAsync();
+        }
 
         public async Task< User> GetUserByIdAsync(int id, bool trackChanges) => await FinAllByCondition(u => u.Id.Equals(id), trackChanges).SingleOrDefaultAsync();
 

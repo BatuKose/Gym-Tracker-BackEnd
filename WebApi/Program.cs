@@ -1,3 +1,4 @@
+using AspNetCoreRateLimit;
 using Services.Contracts;
 using WebApi.Extensions;
 
@@ -25,6 +26,11 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod()
               .AllowAnyHeader());
 });
+builder.Services.ConfigureVersioning();
+builder.Services.AddMemoryCache();
+builder.Services.ConfigureRateLimitingOptions();
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 var logger=app.Services.GetRequiredService<ILoggerService>();
 app.ConfigureExceptionHandler(logger);
@@ -38,6 +44,7 @@ if (app.Environment.IsProduction())
 {
     app.UseHsts();
 }
+app.UseIpRateLimiting();
 app.UseCors();
 app.UseHttpsRedirection();
 

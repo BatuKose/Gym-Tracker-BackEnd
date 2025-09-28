@@ -18,5 +18,6 @@ namespace Repositories.Contracts
         void UpdateUser(User user);
         void DeleteUser(User user);
         User GetUserWithExercises(UserWithExerciseParameters userWithExerciseParameters,int userId);
+        Task<List<User>> GetAllUserAsync(bool trackChanges);
     }
 }

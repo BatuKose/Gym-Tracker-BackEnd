@@ -14,6 +14,7 @@ using MyUser = Entites.Models.User;
 
 namespace Presentation.Controllers
 {
+    //[ApiVersion("1.0")]
     [ApiController]
     [Route("api/users")]
     [Produces("application/json")] // ilerde kaldırılcak
