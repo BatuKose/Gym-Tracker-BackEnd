@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hqdgotyTyTU=",
+  "dgSpecHash": "RHcBK8uE/Zs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Repositories\\Repositories.csproj",
+  "projectFilePath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\batuhan\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\batuhan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",

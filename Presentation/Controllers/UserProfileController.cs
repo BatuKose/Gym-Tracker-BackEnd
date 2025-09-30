@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Marvin.Cache.Headers;
+using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,9 @@ namespace Presentation.Controllers
 {
     [ApiController]
     [Route("api/profile")]
-    [Produces("application/json")] // ilerde kaldırılcak
+    [Produces("application/json")]
+    [HttpCacheExpiration(MaxAge =300,CacheLocation =CacheLocation.Public)]
+    [HttpCacheValidation(MustRevalidate =true)]
     public class UserProfileController : ControllerBase
     {
         private readonly IServiceManager _manager;

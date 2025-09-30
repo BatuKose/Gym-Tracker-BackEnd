@@ -62,6 +62,18 @@
           }
         }
       },
+      "Marvin.Cache.Headers/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Marvin.Cache.Headers.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Marvin.Cache.Headers.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1958,6 +1970,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Marvin.Cache.Headers": "6.0.0",
           "Microsoft.AspNetCore.JsonPatch": "6.0.10",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.AspNetCore.Mvc.Versioning": "5.1.0",
@@ -2058,6 +2071,20 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Marvin.Cache.Headers/6.0.0": {
+      "sha512": "LYI20j8gPVDpvlvjHk0weRMBLNrU9vCl/zhYFe0H/p5UULHHdw5krZ5TlKvcumSbQMP0oYYc2oFJvXJ7uT0ViA==",
+      "type": "package",
+      "path": "marvin.cache.headers/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/Marvin.Cache.Headers.dll",
+        "lib/netcoreapp3.1/Marvin.Cache.Headers.dll",
+        "marvin.cache.headers.6.0.0.nupkg.sha512",
+        "marvin.cache.headers.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -5941,11 +5968,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\WebApi\\WebApi.csproj",
+      "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\batuhan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\WebApi\\obj\\",
+      "outputPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5966,17 +5993,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Entites\\Entites.csproj": {
-              "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Entites\\Entites.csproj"
+            "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Entites\\Entites.csproj": {
+              "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Entites\\Entites.csproj"
             },
-            "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Presentation\\Presentation.csproj": {
-              "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Presentation\\Presentation.csproj"
+            "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Presentation\\Presentation.csproj": {
+              "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Presentation\\Presentation.csproj"
             },
-            "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Repositories\\Repositories.csproj": {
-              "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Repositories\\Repositories.csproj"
+            "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Repositories\\Repositories.csproj"
             },
-            "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Services\\Services.csproj"
+            "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Services\\Services.csproj"
             }
           }
         }

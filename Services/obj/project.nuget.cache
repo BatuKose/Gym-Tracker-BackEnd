@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OSVg7g5+8hs=",
+  "dgSpecHash": "JqJrhPzixoc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler v 1.4\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Users\\batuhan\\Desktop\\Desktop\\ITSoftware\\Asp.Net Web Api\\Projeler\\Gym Trackler\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\batuhan\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\batuhan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

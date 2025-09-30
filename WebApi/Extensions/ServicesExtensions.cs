@@ -1,4 +1,5 @@
 ﻿using AspNetCoreRateLimit;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
@@ -75,7 +76,27 @@ namespace WebApi.Extensions
             services.AddSingleton<IIpPolicyStore,MemoryCacheIpPolicyStore>();
             services.AddSingleton<IRateLimitConfiguration,RateLimitConfiguration>();
             services.AddSingleton<IProcessingStrategy,AsyncKeyLockProcessingStrategy>();
-
         }
+       //public static void ConfigureResponseCaching(this IServiceCollection services)
+       // {
+       //     services.AddResponseCaching();
+       // }
+       public static void ConfigureHttpCacheHeaders(this IServiceCollection services )
+        {
+            services.AddHttpCacheHeaders
+                (
+                    cacheOpt=>
+                    {
+                        cacheOpt.MaxAge=30;
+                        cacheOpt.CacheLocation=CacheLocation.Public;
+                    },
+                    validationOps=>
+                    {
+                        validationOps.MustRevalidate=true; 
+                    }
+                );
+        }
+
     }
+
 }

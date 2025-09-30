@@ -1,6 +1,7 @@
 ﻿using Entites.DataTransferObject.Exercise;
 using Entites.Models;
 using Entites.RequestFeatures;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 using System;
@@ -41,6 +42,8 @@ namespace Presentation.Controllers
 
         [HttpGet("{id:int}")]
         [Produces("application/json")]
+        [HttpCacheExpiration(MaxAge =60,CacheLocation =CacheLocation.Public)]
+        [HttpCacheValidation(MustRevalidate = true)]
         public IActionResult GetExerciseById([FromRoute(Name = "id")] int id)
         {
             var exerciseDto = _serviceManager.ExerciseService.GetExerciseById(id, false);
