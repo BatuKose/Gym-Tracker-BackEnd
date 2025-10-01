@@ -36,6 +36,15 @@ namespace Repositories.EFCore
                     .FirstOrDefault(e => e.Id == id);
         }
 
+        //public Exercise GetExerciseForUpdate(int id, int set, int tekrar, string name)
+        //{
+        //    return _context.Exercise.FirstOrDefault(e =>
+        //        e.Id == id &&
+        //        e.Name == name &&
+        //        e.DefaultSets == set &&
+        //        e.DefaultReps == tekrar);
+        //}
+
 
         public void UpdateExercise(Exercise exercise)=>_context.Exercise.Update(exercise);
        

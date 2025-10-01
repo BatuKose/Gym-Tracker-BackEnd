@@ -37,8 +37,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.ConfigureHttpCacheHeaders();
 var app = builder.Build();
 var logger=app.Services.GetRequiredService<ILoggerService>();
-app.ConfigureExceptionHandler(logger);
-
+app.ConfigureGlobalExceptionMiddleware();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

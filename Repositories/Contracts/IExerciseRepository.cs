@@ -13,5 +13,6 @@ namespace Repositories.Contracts
         void UpdateExercise(Exercise exercise);
         Exercise GetExerciseByid(int id, bool trackChanges);
         void DeleteExercise(Exercise exercise);
+       // Exercise GetExerciseForUpdate(int id,int set,int tekrar,string name);
     }
 }

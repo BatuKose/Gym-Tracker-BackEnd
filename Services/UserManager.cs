@@ -26,24 +26,22 @@ namespace Services
             _manager = manager;
             _loggerService = loggerService;
             _mapper = mapper;
-        }
-
-       
+        }      
         public async Task CreateUser(User user)
         {
             
             if (user == null) throw new ArgumentNullException(nameof(user));
             DateTime today = DateTime.Today;
             int yas = today.Year - user.BirthDate.Year;
-            if (yas < 14) throw new Exception("14 yaşından küçükler kayıt edilemez");
-            if (!user.Email.Contains("@")) throw new Exception("E posta adresini geçersiz");
+            if (yas < 14) throw new BadRequestExeption("14 yaşından küçükler kayıt edilemez");
+            if (!user.Email.Contains("@")) throw new BadRequestExeption("E posta adresini geçersiz");
             bool emailExists = _manager.UserRepository.FinAllByCondition(x => x.Email == user.Email, false).Any();
-            if (emailExists) throw new Exception("Bu e-posta adresi zaten kayıtlı");
+            if (emailExists) throw new BadRequestExeption("Bu e-posta adresi zaten kayıtlı");
             if(user.cepTel.Length==10) user.cepTel="0"+user.cepTel;
-            if(user.cepTel.Length!=11) throw new Exception("Cep telefonu 11 haneli olmalıdır.");
-            if (!System.Text.RegularExpressions.Regex.IsMatch(user.cepTel, @"^\d+$")) throw new ArgumentException("Telefon sadece rakamlardan oluşmalıdır.");
+            if(user.cepTel.Length!=11) throw new BadRequestExeption("Cep telefonu 11 haneli olmalıdır.");
+            if (!System.Text.RegularExpressions.Regex.IsMatch(user.cepTel, @"^\d+$")) throw new BadRequestExeption("Telefon sadece rakamlardan oluşmalıdır.");
             bool phoneNumberExists = _manager.UserRepository.FinAllByCondition(x => x.cepTel == user.cepTel, false).Any();
-            if (phoneNumberExists) throw new Exception("Bu cep telefonu zaten kayıtlı");
+            if (phoneNumberExists) throw new BadRequestExeption("Bu cep telefonu zaten kayıtlı");
             _manager.UserRepository.CreateUser(user);   
           await  _manager.Save();
             _loggerService.LogInfo(user.Username+"kullanıcı isimli kayıt eklendi.");
@@ -53,8 +51,8 @@ namespace Services
         {
             
            var getUser =  await _manager.UserRepository.GetUserByIdAsync(id,false);
-           if (getUser == null) throw new UserNotFoundException(id);
-           if (getUser.isAdmin) throw new Exception("Admin rolü eklenmiş kullanıcıyı silemezsin");
+            if (getUser == null) throw new UserNotFoundExeption();
+            if (getUser.isAdmin) throw new BadRequestExeption("Admin rolü eklenmiş kullanıcıyı silemezsin");
            _manager.UserRepository.DeleteUser(getUser);
             await  _manager.Save();
            _loggerService.LogWarning(getUser.Username+"adlı kullanıcı silindi.");
@@ -79,7 +77,7 @@ namespace Services
         {
             
             var user= await _manager.UserRepository.GetUserByIdAsync(id, trackChanges);
-            if (user == null) throw new UserNotFoundException(id);
+            if (user == null) throw new UserNotFoundExeption();
             return user;
             
         }
@@ -90,7 +88,7 @@ namespace Services
         {
 
             var user = _manager.UserRepository.GetUserWithExercises(userWithExerciseParameters,id);
-            if (user is null) throw new Exception("Antreman bilgisi bulunamadı.");
+            if (user is null) throw new ExerciseNotFoundExeption();
 
             var userDto = new UserWithExercisesDto
             {
@@ -113,18 +111,20 @@ namespace Services
         public async Task UpdateUser(int id, User user, bool trackChanges)
         {
             var Getuser = await _manager.UserRepository.GetUserByIdAsync(id, true);
-            if (Getuser == null)  throw new UserNotFoundException(id);
-            if (user is null) throw new ArgumentException(nameof(user));
-            if (user.Id != Getuser.Id) throw new Exception("Girilen kullanıcı no ile güncelleme yapılcak kullanıcı aynı değildir");
-            if (!user.Email.Contains("@")) throw new Exception("E postayı doğru yazınız");
-            if(user.BirthDate>DateTime.Today) throw new Exception("Doğum tarihini yanlış girilmiştir.");
+            if (Getuser == null)  throw new BadRequestExeption("Kullanıcı bilgilerini giriniz.");
+            if (user is null) throw new UserNotFoundExeption();
+            if (user.Id != Getuser.Id) throw new BadRequestExeption("Girilen kullanıcı no ile güncelleme yapılcak kullanıcı aynı değildir");
+            if (!user.Email.Contains("@")) throw new BadRequestExeption("E postayı doğru yazınız");
+            if(user.BirthDate>DateTime.Today) throw new BadRequestExeption("Doğum tarihini yanlış girilmiştir.");
             bool emailExists = _manager.UserRepository.FinAllByCondition(x => x.Email == user.Email, false).Any();
-            if (emailExists) throw new Exception("Bu e-posta adresi zaten kayıtlı");
+            if (emailExists) throw new DublicateExeptions("Bu e-posta adresi zaten kayıtlı");
             if (user.cepTel.Length == 10) user.cepTel = "0" + user.cepTel;
-            if (user.cepTel.Length != 11) throw new Exception("Cep telefonu 11 haneli olmalıdır.");
-            if (!System.Text.RegularExpressions.Regex.IsMatch(user.cepTel, @"^\d+$")) throw new ArgumentException("Telefon sadece rakamlardan oluşmalıdır.");
+            if (user.cepTel.Length != 11) throw new BadRequestExeption("Cep telefonu 11 haneli olmalıdır.");
+            if (!System.Text.RegularExpressions.Regex.IsMatch(user.cepTel, @"^\d+$")) throw new BadRequestExeption("Telefon sadece rakamlardan oluşmalıdır.");
             bool phoneNumberExists = _manager.UserRepository.FinAllByCondition(x=>x.cepTel==user.cepTel,false).Any();
-            if (phoneNumberExists) throw new Exception("Bu cep telefonu zaten kayıtlı");
+            if (phoneNumberExists) throw new DublicateExeptions("Bu cep telefonu zaten kayıtlı");
+            bool nameExists = _manager.UserRepository.FinAllByCondition(x => x.Username==user.Username, false).Any();
+            if (nameExists) throw new DublicateExeptions("Kullanıcı adı zaten kayıtlı");
             Getuser.Email = user.Email;
             Getuser.isAdmin = user.isAdmin;
             Getuser.Username = user.Username;

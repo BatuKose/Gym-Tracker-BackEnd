@@ -1,5 +1,4 @@
-﻿using Entites.Exceptions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -20,32 +19,14 @@ namespace Repositories.EFCore
         }
 
         public void Create(T entity)
-        {
-            try
-            {
+        { 
                 _context.Set<T>().Add(entity);
-            }
-            catch (Exception)
-            {
-
-                throw new DBExceptions("Veritabanı hatası logları inceleyin.");
-            }
         }
 
 
         public void Delete(T entity)
-        {
-            try
-            {
-               
+        { 
                 _context.Set<T>().Remove(entity);
-            }
-
-            catch (Exception)
-            {
-                     
-                throw new DBExceptions("Veritabanı hatası logları inceleyin.");
-            }
 
         }
 
@@ -53,34 +34,20 @@ namespace Repositories.EFCore
 
         public IQueryable<T> FinAllByCondition(Expression<Func<T, bool>> expression, bool tracChanges)
         {
-            try
-            {
-                return
+
+                 return
                 !tracChanges ?
                  _context.Set<T>().Where(expression).AsNoTracking() :
                   _context.Set<T>().Where(expression);
-            }
-            catch (Exception)
-            {
-
-                throw new DBExceptions("Veritabanı hatası logları inceleyin.");
-            }
-
 
         }
 
 
         public void Update(T entity)
         {
-            try
-            {
-                _context.Set<T>().Update(entity);
-            }
-            catch (Exception)
-            {
 
-                throw new DBExceptions("Veritabanı hatası logları inceleyin.");
-            }
+                _context.Set<T>().Update(entity);
+
 
         }
        

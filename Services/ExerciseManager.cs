@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Entites.DataTransferObject.Exercise;
 using Entites.DataTransferObject.User;
+using Entites.Exceptions;
 using Entites.Models;
 using Repositories.Contracts;
 using Services.Contracts;
@@ -26,11 +27,11 @@ namespace Services
 
         public async Task CreateExercise(ExerciseForCreationDto dto, int UserId)
         {
-            if (UserId<=0) throw new  Exception("Kullanıcı Bilgileri boş geçilemez");
+            if (UserId<=0) throw new  BadRequestExeption("Kullanıcı Bilgileri boş geçilemez");
             var getuser = await _manager.UserRepository.GetUserByIdAsync(UserId, false);
-            if (getuser is null) throw new Exception("Antreman ekleyeceğiniz kullanıcı bulunmamaktadır.");
-            if (dto.DefaultSets<=0) throw new Exception("Set sayısı birden küçük olamaz");
-            if (dto.DefaultReps<=0) throw new Exception("Tekrar sayısı birden küçük olamaz");
+            if (getuser is null) throw new BadRequestExeption("Antreman ekleyeceğiniz kullanıcı bulunmamaktadır.");
+            if (dto.DefaultSets<=0) throw new BadRequestExeption("Set sayısı birden küçük olamaz");
+            if (dto.DefaultReps<=0) throw new BadRequestExeption("Tekrar sayısı birden küçük olamaz");
             var exercise=_mapper.Map<Exercise>(dto);
             exercise.UserId = UserId;
              _manager.ExerciseRepository.CreateExercise(exercise);
@@ -41,7 +42,7 @@ namespace Services
         public void DeleteExerciseById(int id)
         {
             var getExercise = _manager.ExerciseRepository.GetExerciseByid(id,false);
-            if (getExercise is null) throw new Exception("Silinecek Egzersiz bulunamadı.");
+            if (getExercise is null) throw new ExerciseNotFoundExeption();
             _manager.ExerciseRepository.DeleteExercise(getExercise);
         }
 
@@ -49,8 +50,7 @@ namespace Services
         public GetExerciseDto GetExerciseById(int id, bool trackChanges)
         {
             var exercise = _manager.ExerciseRepository.GetExerciseByid(id, trackChanges);
-            if (exercise == null)
-                throw new Exception("Egzersiz bulunamadı.");
+            if (exercise == null) throw new ExerciseNotFoundExeption();
 
             // Entity → DTO map
             var dto = new GetExerciseDto
@@ -71,10 +71,10 @@ namespace Services
         public async Task UpdateExercise(ExerciseForUpdateDto exerciseDto, int id)
         {
             var exercise = _manager.ExerciseRepository.GetExerciseByid(id, true);
-            if (exercise == null)
-                throw new Exception("Güncellenecek egzersiz bulunamadı.");
-            if (exerciseDto.DefaultReps <= 0) throw new Exception("Tekarar sayısı birden küçük olamaz");
-            if (exerciseDto.DefaultSets <= 0) throw new Exception("Set sayısı birden küçük olamaz"); 
+            if (exercise == null) throw new ExerciseNotFoundExeption();
+            if (exerciseDto.DefaultReps <= 0) throw new BadRequestExeption("Tekarar sayısı birden küçük olamaz");
+            if (exerciseDto.DefaultSets <= 0) throw new BadRequestExeption("Set sayısı birden küçük olamaz");
+     
             exercise.Name = exerciseDto.Name;
             exercise.MuscleGroup = exerciseDto.MuscleGroup;
             exercise.DefaultReps = exerciseDto.DefaultReps;
