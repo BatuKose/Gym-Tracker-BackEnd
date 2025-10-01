@@ -2,7 +2,7 @@
 
 ## Açıklama
 Gym Tracker BackEnd, kullanıcıların antrenmanlarını ve egzersizlerini takip etmelerini sağlayan bir Web API projesidir.  
-CRUD işlemleri ve temel kullanıcı/egzersiz yönetimi tamamlanmıştır (%50 bitmiş). Proje üzerinde geliştirme devam etmektedir.
+CRUD işlemleri ve temel kullanıcı/egzersiz yönetimi tamamlanmıştır (%70 bitmiş). Proje üzerinde geliştirme devam etmektedir.
 
 ## Teknolojiler
 - C#
@@ -32,16 +32,9 @@ AutoMapper ile DTO mapping
 Geliştirme Aşamasında
 
 Raporlama
-
-İleri düzey filtreleme
-
 Swagger / API dokümantasyonu
 
 Güvenlik (JWT, token bazlı)
-
-Hız sınırlama (Rate limiting)
-
-Önbellekleme (Cache)
 
 Örnek Endpointler
 
