@@ -1,10 +1,13 @@
 ﻿using AspNetCoreRateLimit;
+using Entites.Models;
 using Marvin.Cache.Headers;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 using Presentation.ActionFilters;
 using Presentation.Controllers;
 using Repositories.Contracts;
@@ -95,6 +98,22 @@ namespace WebApi.Extensions
                         validationOps.MustRevalidate=true; 
                     }
                 );
+        }
+        public static void ConfigureIdentity(this IServiceCollection services)
+        {
+            var builder = services.AddIdentity<UserBase, IdentityRole>
+                (
+                    opt=>
+                    {
+                        opt.Password.RequireDigit=true;
+                        opt.Password.RequireLowercase=false;
+                        opt.Password.RequireUppercase=false;
+                        opt.Password.RequireNonAlphanumeric=false;
+                        opt.Password.RequiredLength=5;
+                        
+                        opt.User.RequireUniqueEmail=true;
+                    }
+                ).AddEntityFrameworkStores<RepositoryContext>().AddDefaultTokenProviders();
         }
 
     }

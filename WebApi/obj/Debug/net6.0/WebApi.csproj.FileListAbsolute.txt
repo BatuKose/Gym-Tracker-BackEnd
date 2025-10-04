@@ -632,3 +632,4 @@ C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackle
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler\WebApi\obj\Debug\net6.0\ref\WebApi.dll
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler\WebApi\bin\Debug\net6.0\Marvin.Cache.Headers.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repositories.EFCore;
 
@@ -11,9 +12,10 @@ using Repositories.EFCore;
 namespace WebApi.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20251004151234_JWTGuvenlik")]
+    partial class JWTGuvenlik
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,18 +58,6 @@ namespace WebApi.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Exercise");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            DefaultReps = 3,
-                            DefaultSets = 10,
-                            Description = "back traning",
-                            MuscleGroup = "back",
-                            Name = "back day",
-                            UserId = 1
-                        });
                 });
 
             modelBuilder.Entity("Entites.Models.User", b =>
@@ -256,29 +246,6 @@ namespace WebApi.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "bd9458a1-5439-468b-a04b-4699c00345ad",
-                            ConcurrencyStamp = "7b194242-f4e3-4388-af33-407ca4156da8",
-                            Name = "User",
-                            NormalizedName = "USER"
-                        },
-                        new
-                        {
-                            Id = "1c5fedbf-c90b-4db6-9e97-6298964d318c",
-                            ConcurrencyStamp = "823caafa-1a0e-4a06-81f9-a5b1e67182cb",
-                            Name = "Antreneör",
-                            NormalizedName = "ANTRENEÖR"
-                        },
-                        new
-                        {
-                            Id = "0eb0848b-25cb-4939-bd9f-428c90d02ee6",
-                            ConcurrencyStamp = "11c2ae1e-8cad-42de-b498-7f22340a5f38",
-                            Name = "Admin",
-                            NormalizedName = "ADMIN"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

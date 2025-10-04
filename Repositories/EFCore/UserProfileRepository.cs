@@ -1,4 +1,5 @@
-﻿using Entites.Models;
+﻿using Entites.DataTransferObject.UserProfile;
+using Entites.Models;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 using System;
@@ -18,7 +19,9 @@ namespace Repositories.EFCore
             _context=context;
         }
 
-        
+       
+
+     
 
         public async Task<UserProfile> GetUserProgileAsync(int id, bool trackChanges)
         {

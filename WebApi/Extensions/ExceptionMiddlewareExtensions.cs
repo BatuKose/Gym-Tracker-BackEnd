@@ -1,4 +1,5 @@
-﻿using Entites.Exceptions;
+﻿
+using Entites.Exceptions;
 using System.Text.Json;
 
 namespace WebApi.Extensions
@@ -42,4 +43,3 @@ namespace WebApi.Extensions
         }
     }
 }
-

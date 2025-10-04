@@ -77,3 +77,4 @@ C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackle
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\refint\Entites.dll
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\Entites.pdb
 C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\ref\Entites.dll
+C:\Users\batuhan\Desktop\Desktop\ITSoftware\Asp.Net Web Api\Projeler\Gym Trackler\Entites\obj\Debug\net6.0\Entites.csproj.AssemblyReference.cache

@@ -10,6 +10,7 @@ namespace Repositories.Contracts
     public interface IUserProfileRepository
     {
         Task<UserProfile> GetUserProgileAsync(int id, bool trackChanges);
+
     
     }
 }

@@ -24,7 +24,8 @@ namespace Services
             _mapper=mapper;
         }
 
-       
+   
+
         public async Task<UserProfileDto> GetUserProfileAsync(int id, bool trackChanges)
         {
             var profile = await _manager.userProfileRepository.GetUserProgileAsync(id, trackChanges);
@@ -46,6 +47,6 @@ namespace Services
             return dto;
         }
 
-        
+     
     }
 }

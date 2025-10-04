@@ -11,5 +11,6 @@ namespace Services.Contracts
     public interface IUserProfileService
     {
         Task<UserProfileDto> GetUserProfileAsync(int id, bool trackChanges);
+       
     }
 }
