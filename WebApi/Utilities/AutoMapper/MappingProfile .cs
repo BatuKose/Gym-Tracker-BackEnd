@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Entites.DataTransferObject;
 using Entites.DataTransferObject.Exercise;
 using Entites.DataTransferObject.ExerciseWithUser;
 using Entites.DataTransferObject.User;
@@ -18,6 +19,7 @@ namespace WebApi.Utilities.AutoMapper
             CreateMap<CreateUserDto,User>();
             CreateMap<User,UserWithExercisesDto>();
             CreateMap<Exercise, ExerciseDtoo>();//Entity -> DTO
+            CreateMap<UserForRegistration, UserBase>();
         }
     }
 }

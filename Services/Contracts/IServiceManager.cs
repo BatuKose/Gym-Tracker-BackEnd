@@ -11,5 +11,6 @@ namespace Services.Contracts
         IUserService UserService { get; }
         IExerciseService ExerciseService { get; }
         IUserProfileService UserProfileService { get; }
+        IAuthenticationService AuthenticationService { get; }
     }
 }

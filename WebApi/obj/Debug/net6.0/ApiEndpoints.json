@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Presentation.Controllers.AuthenticationController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/authentication",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userForRegistrationDto",
+        "Type": "Entites.DataTransferObject.UserForRegistration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Presentation.Controllers.ExerciseController",
     "Method": "GetUserWithExercises",
     "RelativePath": "api/exercise",
