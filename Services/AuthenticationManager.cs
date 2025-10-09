@@ -18,7 +18,7 @@ namespace Services
         private readonly IMapper _mapper;
         private readonly UserManager<UserBase> _userManager;
         private readonly IConfiguration _configuration;
-
+        private UserBase? _user;
         public AuthenticationManager(ILoggerService logger, IMapper mapper, UserManager<UserBase> userManager, IConfiguration configuration)
         {
             _logger=logger;
@@ -32,6 +32,19 @@ namespace Services
              var user=_mapper.Map<UserBase>(userForRegistrationDto);
             var result= await _userManager.CreateAsync(user,userForRegistrationDto.passWord);
             if (result.Succeeded) await _userManager.AddToRolesAsync(user, userForRegistrationDto.Roles);
+            return result;
+
+        }
+         
+        public async Task<bool> ValidateUser(userForAuthenticationDto userForAuthenticationDto)
+        {
+            _user= await _userManager.FindByNameAsync(userForAuthenticationDto.userName);
+            var result = (_user !=null && await _userManager.CheckPasswordAsync(_user, userForAuthenticationDto.PassWord));
+            if (!result)
+            {
+                _logger.LogWarning($"{nameof(ValidateUser)}: Doğrulama başarısız oldu. Kullanıcı adı veya şifre yanlış.");
+            }
+
             return result;
 
         }

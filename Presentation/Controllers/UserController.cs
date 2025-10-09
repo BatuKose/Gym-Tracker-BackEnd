@@ -1,6 +1,7 @@
 ﻿using Entites.DataTransferObject.User;
 using Entites.Models;
 using Entites.RequestFeatures;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Presentation.ActionFilters;
@@ -37,6 +38,7 @@ namespace Presentation.Controllers
                 return StatusCode(201, user);
         }
         [HttpGet]
+        [Authorize]
         public async Task< IActionResult> GettAllUser([FromQuery] UserParameters userParameters)
         {
            
