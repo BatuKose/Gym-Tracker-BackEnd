@@ -120,28 +120,30 @@ namespace WebApi.Extensions
         }
         public static void ConfigureJwt(this IServiceCollection services, IConfiguration configuration)
         {
-            var  JwtSettings = configuration.GetSection("JwtSettings");
-            var secretKey = JwtSettings["secretKey"];
+            var jwtSettings = configuration.GetSection("JwtSettings");
+            var secretKey = jwtSettings["secretKey"];
 
-            services.AddAuthentication(
-                opt =>
+            services.AddAuthentication(opt =>
+            {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    opt.DefaultAuthenticateScheme=JwtBearerDefaults.AuthenticationScheme;
-                    opt.DefaultChallengeScheme=JwtBearerDefaults.AuthenticationScheme;
-                }
-                ).AddJwtBearer(options=>
-                     options.TokenValidationParameters = new TokenValidationParameters
-                     {
-                         ValidateIssuer=true,
-                         ValidateAudience=true,
-                         ValidateLifetime=true,
-                         ValidateIssuerSigningKey=true,
-                         ValidIssuer=JwtSettings["validIssuer"],
-                         ValidAudience=JwtSettings["validAudience"],
-                         IssuerSigningKey= new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
-                     }
-                );
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+
+                    ValidIssuer = jwtSettings["validIssuer"],
+                    ValidAudience = jwtSettings["validAudience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+                };
+            });
         }
+
     }
 
 }
