@@ -1,4 +1,5 @@
 ﻿using Entites.DataTransferObject;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 using System;
@@ -19,6 +20,9 @@ namespace Presentation.Controllers
         {
             _service=service;
         }
+
+
+        [Authorize(Roles ="Admin")]
         [HttpPost]
      
         public async Task<IActionResult> RegisterUser([FromBody] UserForRegistration userForRegistrationDto)
@@ -35,6 +39,7 @@ namespace Presentation.Controllers
             return StatusCode(201);    
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> AuthenTicate([FromBody] userForAuthenticationDto user)
         {

@@ -1,4 +1,5 @@
 ﻿using Marvin.Cache.Headers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 using System;
@@ -24,11 +25,13 @@ namespace Presentation.Controllers
         }
 
         [HttpGet("{id:int}")]
+        [Authorize]
         public async Task< IActionResult> GetUserProfileAsync([FromRoute(Name ="id")] int id,bool trackChanges)
         {
             var profile= await _manager.UserProfileService.GetUserProfileAsync(id, false);
             return Ok(profile);
         }
+        [Authorize(Roles = "Admin")]
         [HttpOptions]
         public IActionResult Options()
         {

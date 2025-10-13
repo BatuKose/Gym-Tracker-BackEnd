@@ -2,6 +2,7 @@
 using Entites.Models;
 using Entites.RequestFeatures;
 using Marvin.Cache.Headers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 using System;
@@ -23,6 +24,7 @@ namespace Presentation.Controllers
         {
             _serviceManager = serviceManager;
         }
+        [Authorize]
 
         [HttpPost("{id:int}")]
         public async Task<IActionResult> CreateOneExercise([FromRoute(Name = "id")] int id, [FromBody] ExerciseForCreationDto dto)
@@ -30,7 +32,7 @@ namespace Presentation.Controllers
             await _serviceManager.ExerciseService.CreateExercise(dto, id);
             return StatusCode(201);
         }
-
+        [Authorize]
         [HttpHead] // kontrol
         [HttpGet("exercise/users/{id:int}")]
         [Produces("application/json")]
@@ -39,7 +41,7 @@ namespace Presentation.Controllers
             var User = _serviceManager.UserService.GetUserWithExercises(userWithExerciseParameters, id);
             return Ok(User);
         }
-
+        [Authorize (Roles = "Admin,Antreneör")]
         [HttpGet("{id:int}")]
         [Produces("application/json")]
         [HttpCacheExpiration(MaxAge =60,CacheLocation =CacheLocation.Public)]
@@ -50,7 +52,7 @@ namespace Presentation.Controllers
             return Ok(exerciseDto);
         }
 
-
+        [Authorize]
         [HttpPut("{id:int}")]
         public IActionResult UpdateExercise([FromRoute(Name = "id")] int id, ExerciseForUpdateDto exerciseDto)
         {
@@ -59,12 +61,14 @@ namespace Presentation.Controllers
             return NoContent();
 
         }
+        [Authorize]
         [HttpDelete("{id:int}")]
         public IActionResult DeleteExercise([FromRoute(Name ="id")] int id)
         {
             _serviceManager.ExerciseService.DeleteExerciseById(id);
             return NoContent();
         }
+        [Authorize(Roles ="Admin")]
         [HttpOptions]
         public IActionResult Options()
         {

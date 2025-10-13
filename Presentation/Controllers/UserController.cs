@@ -28,7 +28,7 @@ namespace Presentation.Controllers
         {
             _serviceManager = serviceManager;
         }
-       
+        [Authorize (Roles = "Admin")]
         [HttpPost]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task< IActionResult> CreateUser([FromBody] MyUser user)
@@ -37,8 +37,8 @@ namespace Presentation.Controllers
                 await _serviceManager.UserService.CreateUser(user);
                 return StatusCode(201, user);
         }
+        [Authorize(Roles = "Admin,Antreneör")]
         [HttpGet]
-        [Authorize]
         public async Task< IActionResult> GettAllUser([FromQuery] UserParameters userParameters)
         {
            
@@ -46,6 +46,7 @@ namespace Presentation.Controllers
                 return Ok(User);
             
         }
+        [Authorize(Roles = "Admin,Antreneör")]
         [HttpGet("{id:int}")]
         public async Task< IActionResult> GetUserById([FromRoute(Name ="id")] int id)
         {       
@@ -53,6 +54,7 @@ namespace Presentation.Controllers
                 var user = await _serviceManager.UserService.GetUserByIdAsync(id, false);
                 return Ok(user);    
         }
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id:int}")]
         [ServiceFilter(typeof(LogFilterAttribute))]
         public IActionResult DeleteUser([FromRoute(Name ="id")] int id)
@@ -61,6 +63,7 @@ namespace Presentation.Controllers
             _serviceManager.UserService.DeleteUser(id,false);
                 return NoContent();    
         }
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id:int}")]
 
         [ServiceFilter(typeof(ValidationFilterAttribute))]
@@ -71,6 +74,7 @@ namespace Presentation.Controllers
               await  _serviceManager.UserService.UpdateUser(id,user,true);
                 return Ok("Kullanıcı Güncellendi");  
         }
+        [Authorize(Roles = "Admin")]
         [HttpPatch("{id:int}")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> PartiallyUpdateUser([FromRoute(Name = "id")] int id, [FromBody] JsonPatchDocument<MyUser> user)
@@ -81,6 +85,7 @@ namespace Presentation.Controllers
           await  _serviceManager.UserService.UpdateUser(id, entiy, true);
             return NoContent();
         }
+        [Authorize(Roles = "Admin")]
         [HttpOptions]
         public IActionResult GetUserOptions()
         {
