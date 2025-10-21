@@ -44,13 +44,8 @@ namespace Presentation.Controllers
         public async Task<IActionResult> AuthenTicate([FromBody] userForAuthenticationDto user)
         {
             if(! await _service.AuthenticationService.ValidateUser(user)) return Unauthorized();
-            return Ok
-                (
-                    new
-                    {
-                        token = await _service.AuthenticationService.CreateToken()
-                    }
-                );
+            var tokenDto = await _service.AuthenticationService.CreateToken(populateExp: true);
+            return Ok(tokenDto);
         }
     }
 }
