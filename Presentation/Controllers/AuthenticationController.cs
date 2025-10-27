@@ -47,5 +47,12 @@ namespace Presentation.Controllers
             var tokenDto = await _service.AuthenticationService.CreateToken(populateExp: true);
             return Ok(tokenDto);
         }
+        [HttpPost("refresh")]
+
+        public async Task<IActionResult> Refresh([FromBody] TokenDto tokenDto)
+        {
+            var tokenDtoToReturn = await _service.AuthenticationService.RefreshToken(tokenDto);
+            return Ok(tokenDtoToReturn);
+        }
     }
 }

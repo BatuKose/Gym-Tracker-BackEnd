@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Entites.DataTransferObject;
+using Entites.Exceptions;
 using Entites.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -146,6 +147,18 @@ namespace Services
 
             return result;
 
+        }
+
+        public async Task<TokenDto> RefreshToken(TokenDto tokenDto)
+        {
+            var principal=GetPrincipalFromExpriedToken(tokenDto.AccessToken);
+            var user = await _userManager.FindByNameAsync(principal.Identity.Name);
+            if(user is null || user.RefreshToken!=tokenDto.RefreshToken || user.RefreshTokenExpiryTime<=DateTime.Now)
+            {
+                throw new RefreshTokenBadReqruestExceptin();
+            }
+            _user=user;
+            return await CreateToken(populateExp: false);
         }
     }
 }

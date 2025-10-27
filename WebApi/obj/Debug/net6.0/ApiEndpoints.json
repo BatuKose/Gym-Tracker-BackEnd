@@ -32,6 +32,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Presentation.Controllers.AuthenticationController",
+    "Method": "Refresh",
+    "RelativePath": "api/authentication/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenDto",
+        "Type": "Entites.DataTransferObject.TokenDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Presentation.Controllers.ExerciseController",
     "Method": "GetUserWithExercises",
     "RelativePath": "api/exercise",
