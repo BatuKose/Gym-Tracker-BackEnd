@@ -38,3 +38,4 @@ POST /api/exercises → Yeni egzersiz ekler
 İletişim
 
 Batuhan – https://github.com/BatuKose
+https://www.kariyer.net/ozgecmis/bkoceiy0kg
