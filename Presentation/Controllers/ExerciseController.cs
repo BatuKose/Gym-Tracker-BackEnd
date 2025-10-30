@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace Presentation.Controllers
 {
+    [ApiExplorerSettings(GroupName = "V1")]
     [ApiController]
     [Route("api/exercise")]
     [Produces("application/json")] // ilerde kaldırılcak

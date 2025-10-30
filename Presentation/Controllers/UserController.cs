@@ -15,6 +15,7 @@ using MyUser = Entites.Models.User;
 
 namespace Presentation.Controllers
 {
+    [ApiExplorerSettings(GroupName = "V1")]
     //[ApiVersion("1.0")]
     [ApiController]
     [Route("api/users")]

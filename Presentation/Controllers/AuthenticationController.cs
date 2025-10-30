@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Presentation.Controllers
 {
+    [ApiExplorerSettings(GroupName ="V1")]
     [ApiController]
     [Route("api/authentication")]
     public class AuthenticationController : ControllerBase

@@ -17,6 +17,7 @@ using Repositories.EFCore;
 using Services;
 using Services.Contracts;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.Xml;
 using System.Text;
 
 namespace WebApi.Extensions
@@ -142,6 +143,52 @@ namespace WebApi.Extensions
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
                 };
             });
+        }
+
+        public static void ConfigureSwagger(this IServiceCollection services)
+        {
+            services.AddSwaggerGen
+                (
+                    s => 
+                    {
+                        s.SwaggerDoc("V1",new OpenApiInfo 
+                            {
+                                Title="Gym Tracker Wen API",Version="V1",Description="Gym gelişmelerinizi takip etmek için program",
+                                TermsOfService=new Uri("https://bos.com.tr"),Contact= new OpenApiContact { Email="batuhankose36@gmail.com",
+                                Name="Batuhan KÖSE",Url= new Uri("https://bos.com.tr")}
+                            }
+                        );
+                        s.SwaggerDoc("V2", new OpenApiInfo 
+                            {
+                            Title="Gym Tracker Wen API V2",Version="V2"
+                        }
+                        );
+                        s.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                        {
+                            In=ParameterLocation.Header,
+                            Description="Place to add jwt with bearer",
+                            Name="Authorization",
+                            Type=SecuritySchemeType.ApiKey,
+                            Scheme="Bearer"
+                        });
+                        s.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                        {
+                            {
+                                new OpenApiSecurityScheme
+                                {
+                                    Reference=new OpenApiReference
+                                    {
+                                        Type=ReferenceType.SecurityScheme,
+                                        Id="Bearer"
+                                    },
+                                    Name="Bearer"
+                                },
+                                new List<string>()
+                            },
+                        });
+
+                    }
+                );
         }
 
     }
